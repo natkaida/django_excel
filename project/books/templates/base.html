@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Загружаем Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    .content-wrapper {
+        min-height: 100%;
+        position: relative;
+        padding-bottom: 60px; 
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px; 
+        background-color: #343a40;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+    }
+        body.dark-mode {
+            background-color: #333;
+            color: white;
+        }
+        .card.dark-mode {
+            background-color: #444;
+        }
+        .card {
+            max-width: 700px;
+        }
+        .book-cover-preview {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+    <!-- Верхнее меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'all_books' %}">Библиотека</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'thriller' %}">Триллеры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'programming' %}">Программирование</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'fantasy' %}">Фэнтези</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mystery' %}">Детективы</a>
+                    </li>
+                </ul>
+                <button id="toggle-theme" class="btn btn-primary ml-2">Сменить тему</button>
+            </div>
+        </div>
+    </nav>
+<div class="container mt-4">
+<div class="row justify-content-center">
+    {% block content %}
+    {% endblock content %}
+  </div>
+    </div>
+    <!-- Футер -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&#169;2023 Моя библиотека</p>
+    </footer>
+
+    <!-- загружаем Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Проверяем, есть ли сохраненное значение в localStorage
+    var theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        var cards = document.querySelectorAll('.card');
+        cards.forEach(function(card) {
+            card.classList.add('dark-mode');
+        });
+    }
+
+    // Обрабатываем нажатие кнопки "Сменить тему"
+    document.querySelector('#toggle-theme').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        var cards = document.querySelectorAll('.card');
+        cards.forEach(function(card) {
+            card.classList.toggle('dark-mode');
+        });
+
+        // Сохраняем выбранный режим в localStorage
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+</div>
+</body>
+</html>

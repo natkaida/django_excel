@@ -1,0 +1,24 @@
+- name: Иван
+  lastname: Никифоров
+  age: 20
+  faculty: Физико-математический
+  year: 3
+  average: 4.5
+- name: Екатерина
+  lastname: Смирнова
+  age: 19
+  faculty: Иностранных языков
+  year: 2
+  average: 4.2
+- name: Алексей
+  lastname: Петров
+  age: 21
+  faculty: Инженерный
+  year: 4
+  average: 4.8
+- name: Ольга
+  lastname: Ермолаева
+  age: 22
+  faculty: Экономический
+  year: 4
+  average: 4.0

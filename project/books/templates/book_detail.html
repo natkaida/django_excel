@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+  <div class="col-md-3">
+    <div class="book-cover-preview">
+     <a href="/media/covers/{{ book.cover }}.jpeg">
+      <img src="/media/covers/{{ book.cover }}.jpeg" alt="Обложка" class="img-thumbnail">
+     </a>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <h1>{{ book.title }}</h1>
+    <p>Автор: {{ book.author }}</p>
+    <p>Жанр: {{ book.genre }}</p>
+    <p>Год выпуска: {{ book.year }}</p>
+    <p>{{ book.description }}</p>
+  </div>
+</div>
+{% endblock %}

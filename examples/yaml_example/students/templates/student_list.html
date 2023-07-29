@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список студентов</title>
+</head>
+<body>
+    <h1>Наши студенты</h1>
+    <ul>
+    {% for student in students %}
+        <li>имя: {{ student.name }}, фамилия: {{ student.lastname }}, возраст: {{ student.age }},
+        курс: {{ student.year }}, факультет: {{ student.faculty }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

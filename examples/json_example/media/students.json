@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Ирина",
+        "lastname": "Никифорова",
+        "age": 20,
+        "faculty": "Физико-математический",
+        "year": 3,
+        "average": 4.6
+    },
+    {
+        "name": "Алексей",
+        "lastname": "Петровский",
+        "age": 19,
+        "faculty": "Инженерный",
+        "year": 2,
+        "average": 4.1
+    },
+    {
+        "name": "Екатерина",
+        "lastname": "Иванова",
+        "age": 21,
+        "faculty": "Экономический",
+        "year": 4,
+        "average": 4.3
+    },
+    {
+        "name": "Андрей",
+        "lastname": "Смирнов",
+        "age": 20,
+        "faculty": "Инженерный",
+        "year": 3,
+        "average": 4.2
+    },
+    {
+        "name": "Светлана",
+        "lastname": "Васильева",
+        "age": 22,
+        "faculty": "Реклама и PR",
+        "year": 5,
+        "average": 4.8
+    },
+    {
+        "name": "Иван",
+        "lastname": "Ковалев",
+        "age": 19,
+        "faculty": "Машиностроительный",
+        "year": 2,
+        "average": 3.7
+    },
+    {
+        "name": "Ольга",
+        "lastname": "Попова",
+        "age": 21,
+        "faculty": "Физико-математический",
+        "year": 4,
+        "average": 4.5
+    },
+    {
+        "name": "Максим",
+        "lastname": "Сидоров",
+        "age": 20,
+        "faculty": "Инженерный",
+        "year": 3,
+        "average": 4.4
+    },
+    {
+        "name": "Елена",
+        "lastname": "Андреева",
+        "age": 22,
+        "faculty": "Физико-математический",
+        "year": 5,
+        "average": 4.9
+    },
+    {
+        "name": "Павел",
+        "lastname": "Михайлов",
+        "age": 19,
+        "faculty": "Инженерный",
+        "year": 2,
+        "average": 4.0
+    },
+    {
+        "name": "Мария",
+        "lastname": "Смирнова",
+        "age": 21,
+        "faculty": "Экономический",
+        "year": 4,
+        "average": 4.6
+    }
+]

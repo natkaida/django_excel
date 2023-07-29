@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for book in books %}
+<div class="card mb-3 px-0">
+  <div class="row g-0">
+    <div class="col-md-4 card-image">
+      <img src="/media/covers/{{book.cover}}.jpeg" class="img-fluid rounded" alt="{{ book.cover }}">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ book.title }}</h5>
+        <h5 class="card-title text-muted">{{ book.author }}</h5>
+        <span class="badge text-bg-danger">{{ book.genre }}</span>
+        <p class="card-text">{{ book.description|truncatechars:"120"|linebreaks }}</p>
+        <p class="text-end"><a href="{% url 'book_detail' book_id=book.book_id %}" class="btn btn-primary">Подробнее</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
